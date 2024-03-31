@@ -1,0 +1,7 @@
+#Folders to avoid
+old/*
+data/*
+cache_data/*
+__pycache__/*
+saved_models/*
+summary/*

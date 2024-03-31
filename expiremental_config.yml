@@ -1,0 +1,91 @@
+adam_epsilon: 1e-08
+always_save_model: True
+cache_path: "cache_data"
+config_name: "roberta-base"
+cpu_cont: 1
+data_dir: "data"
+data_num: -1
+decoder_start_token_id: 1
+dev_filename: "validation.json"
+device: "cuda"
+do_eval: True
+do_eval_bleu: False
+do_test: True
+do_train: True
+eval_batch_size: 128
+gradient_accumulation_steps: 1
+info_level: 1
+is_sample: True
+learning_rate: 5e-05
+load_model_path: "saved_models/checkpoint-best-ppl/Baseline_Best_ppl.bin"
+log_verbose: True
+max_source_length: 45
+max_target_length: 30
+model_name: "roberta-base"
+num_train_epochs: 5
+output_dir: "saved_models/"
+patience: 5
+sample_size: 5000
+save_last_checkpoints: False
+seed: 1234
+start_epoch: 0
+summary_dir: "summary"
+summary_verbose: False
+task: "concode"
+test_filename: None
+tokenizer_name: "roberta-base"
+train_batch_size: 128
+train_filename: "train.json"
+warmup_steps: 100
+weight_decay: 0.0
+# #Delete
+# task: "concode"
+
+# data_num: -1
+# start_epoch: 0
+# num_train_epochs: 5
+# patience: 5
+# cache_path: "cache_data"
+# summary_dir: "summary"
+# data_dir: "data"
+# res_dir: "res"
+# res_fn:
+# add_task_prefix: False
+# save_last_checkpoints: False
+# always_save_model: True
+# do_eval_bleu: False
+# model_name_or_path: "roberta-base"
+# output_dir: "saved_models/"
+# load_model_path: "saved_models/checkpoint-best-ppl/pytorch_model.bin"
+# train_filename: "train.json"
+# dev_filename: "vla.json"
+# test_filename: None
+# config_name:
+# tokenizer_name: "roberta-base"
+# max_source_length: 64
+# max_target_length: 32
+# do_train: True
+# do_eval: True
+# do_test: True
+# do_lower_case: False
+# no_cuda: False
+# train_batch_size: 8
+# eval_batch_size: 8
+# gradient_accumulation_steps: 1
+# learning_rate: 5e-05
+# beam_size: 10
+# weight_decay: 0.0
+# adam_epsilon: 1e-08
+# max_grad_norm: 1.0
+# save_steps: -1
+# log_steps: -1
+# max_steps: -1
+# eval_steps: -1
+# train_steps: -1
+# warmup_steps: 100
+# local_rank: -1
+# seed: 1234
+# decoder_start_token_id: 1
+# is_sample: False
+# device: "cuda"
+# cpu_cont: 1
