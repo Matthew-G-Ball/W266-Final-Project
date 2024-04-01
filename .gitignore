@@ -1,9 +1,9 @@
 #Folders to avoid
 old/*
-cache_data/*
 __pycache__/*
-saved_models/*
-summary/*
 
 #Files to avoid
 *.json
+*.pt
+*.bin
+events.out.*
