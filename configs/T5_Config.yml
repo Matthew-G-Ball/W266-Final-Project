@@ -1,41 +1,53 @@
-adam_epsilon: 1e-08
+task: "concode"
+
 always_save_model: True
+save_last_checkpoints: False
+
 cache_path: "cache_data"
-config_name: "roberta-base"
-cpu_cont: 1
+load_model_path: "saved_models/Baseline/Base.bin"
+
+config_name: "Salesforce/codet5-base"
+model_name: "Salesforce/codet5-base"
+tokenizer_name: "Salesforce/codet5-base"
+dev_filename: "validation_filtered.json"
+train_filename: "train_filtered.json"
+test_filename: None
+lang: "SQL"
+
 data_dir: "data"
-data_num: -1
-decoder_start_token_id: 1
-dev_filename: "validation.json"
+output_dir: "saved_models/"
+summary_dir: "summary"
+res_dir: "res"
+
+cpu_cont: 1
 device: "cuda"
+
 do_eval: True
 do_eval_bleu: False
 do_test: True
 do_train: True
-eval_batch_size: 128
-gradient_accumulation_steps: 1
-info_level: 1
-is_sample: True
-learning_rate: 5e-05
-load_model_path: "saved_models/checkpoint-best-ppl/Baseline_Best_ppl.bin"
-log_verbose: True
-max_source_length: 45
-max_target_length: 30
-model_name: "roberta-base"
-num_train_epochs: 5
-output_dir: "saved_models/"
-patience: 5
-sample_size: 5000
-save_last_checkpoints: False
-seed: 1234
-start_epoch: 0
-summary_dir: "summary"
 summary_verbose: False
-task: "concode"
-test_filename: None
-tokenizer_name: "roberta-base"
-train_batch_size: 128
-train_filename: "train.json"
+log_verbose: True
+info_level: 1
+
+is_sample: False
+sample_size: 5000
+
+seed: 1234
+learning_rate: 5e-05
+start_epoch: 0
+num_train_epochs: 5
+train_batch_size: 64
+eval_batch_size: 64
+adam_epsilon: 1e-08
+max_source_length: 100
+max_target_length: 50
+beam_size: 1
+
+gradient_accumulation_steps: 1
+data_num: -1
+patience: 5
+decoder_start_token_id: 1
 warmup_steps: 100
 weight_decay: 0.0
 # #Delete

@@ -1,9 +1,11 @@
 #Folders to avoid
 old/*
 __pycache__/*
-
+data/__pycache__/*
+Not_Finished/*
 #Files to avoid
 *.json
 *.pt
 *.bin
+*.pkl
 events.out.*
